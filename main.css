@@ -22,18 +22,27 @@ body {
   height: 100%;
 }
 
+@keyframes zoom {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 250%;
+  }
+}
+
 .t1 {
-  height: 250%;
   background-color: transparent;
   border-left: 2px solid white;
   transform-origin: left bottom;
   width: 1%;
   position: absolute;
   bottom: 2.5vw;
+  animation: zoom 3000ms forwards;
+  animation-delay: 0.5s;
 }
 
 .t2 {
-  height: 250%;
   background-color: transparent;
   border-left: 2px solid white;
   transform-origin: left bottom;
@@ -41,11 +50,11 @@ body {
   position: absolute;
   bottom: 0%;
   left: 0%;
-  top: -150%;
+  animation: zoom 3000ms forwards;
+  animation-delay: 0.7s;
 }
 
 .t3 {
-  height: 250%;
   background-color: transparent;
   border-left: 2px solid white;
   transform-origin: left bottom;
@@ -53,4 +62,32 @@ body {
   position: absolute;
   bottom: -2.5vw;
   left: 0%;
+  animation: zoom 3000ms forwards;
+  animation-delay: 0.9s;
+}
+
+.logo {
+  background-image: url(media/head.png);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10vw;
+  height: 10vw;
+  transform: scale(0);
+  transform-origin: center center;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  animation: headUp 1500ms forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes headUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
 }
