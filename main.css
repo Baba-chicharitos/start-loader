@@ -8,38 +8,49 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: blue;
-}
-
-.back {
-  width: 100%;
-  height: 100%;
   background-color: black;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8vh, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(8vh, 1fr));
-  /* grid-template-columns: [a]1fr [b]1fr [c]1fr [d]1fr [e]1fr [f]1fr [g]1fr [h]1fr [i]1fr [j]1fr [k]1fr [l]1fr [m];
-  grid-template-rows: [n]1fr [o]1fr [p]1fr [q]1fr [r]1fr [s]1fr [t]1fr [u]1fr [v]1fr [w]1fr [x]1fr [y]1fr [z]; */
   overflow: hidden;
 }
 
-.rec1 {
+.rectangle2 {
+  position: absolute;
+  background-color: transparent;
+  z-index: 200;
+  top: 0%;
+  left: 0%;
   width: 100%;
   height: 100%;
-  background-color: transparent;
-  grid-column: 1 / 19;
-  grid-row: 1 / 12;
 }
 
 .t1 {
-  grid-column: 1 / 19;
-  grid-row: 1 / 12;
   height: 250%;
   background-color: transparent;
-  border-left: 3px solid white;
+  border-left: 2px solid white;
   transform-origin: left bottom;
-  transform: rotate(52.82907651005961deg);
-  width: 100%;
-  position: relative;
+  width: 1%;
+  position: absolute;
+  bottom: 2.5vw;
+}
+
+.t2 {
+  height: 250%;
+  background-color: transparent;
+  border-left: 2px solid white;
+  transform-origin: left bottom;
+  width: 1%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
   top: -150%;
+}
+
+.t3 {
+  height: 250%;
+  background-color: transparent;
+  border-left: 2px solid white;
+  transform-origin: left bottom;
+  width: 1%;
+  position: absolute;
+  bottom: -2.5vw;
+  left: 0%;
 }
