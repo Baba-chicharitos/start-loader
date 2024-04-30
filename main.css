@@ -8,18 +8,21 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: orange;
   overflow: hidden;
 }
 
 .rectangle2 {
   position: absolute;
-  background-color: transparent;
+  background-color: black;
   z-index: 200;
   top: 0%;
   left: 0%;
   width: 100%;
   height: 100%;
+  animation: smaller 1500ms forwards;
+  animation-delay: 7s;
+  z-index: -200;
 }
 
 @keyframes zoom {
@@ -38,8 +41,8 @@ body {
   width: 1%;
   position: absolute;
   bottom: 2.5vw;
-  animation: zoom 3000ms forwards;
-  animation-delay: 0.5s;
+  animation: zoom 3000ms forwards, smaller 1500ms forwards;
+  animation-delay: 0.5s, 7s;
 }
 
 .t2 {
@@ -50,8 +53,8 @@ body {
   position: absolute;
   bottom: 0%;
   left: 0%;
-  animation: zoom 3000ms forwards;
-  animation-delay: 0.7s;
+  animation: zoom 3000ms forwards, smaller 1500ms forwards;
+  animation-delay: 0.7s, 7s;
 }
 
 .t3 {
@@ -62,8 +65,8 @@ body {
   position: absolute;
   bottom: -2.5vw;
   left: 0%;
-  animation: zoom 3000ms forwards;
-  animation-delay: 0.9s;
+  animation: zoom 3000ms forwards, smaller 1500ms forwards;
+  animation-delay: 0.9s, 7s;
 }
 
 .logo {
@@ -79,8 +82,8 @@ body {
   background-size: cover;
   background-position: center;
   border: 2px solid white;
-  animation: headUp 1500ms forwards;
-  animation-delay: 1.2s;
+  animation: headUp 1500ms forwards, smaller 1500ms forwards;
+  animation-delay: 1.2s, 7s;
 }
 
 @keyframes headUp {
@@ -89,5 +92,14 @@ body {
   }
   100% {
     transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes smaller {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
   }
 }
